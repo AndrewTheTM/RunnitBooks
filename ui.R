@@ -14,16 +14,14 @@ shinyUI(pageWithSidebar(
   
   # Sidebar with a slider input for number of bins
   sidebarPanel(
-    #choices = c("Non-fiction","Non-fiction/Technical","Technical","Reference","Fiction")
     selectizeInput("types", 
        "Book Types", 
        choices = NULL,
-       
-    #   c("Non-fiction","Non-fiction/Technical","Technical","Reference","Fiction"), 
        NULL, TRUE, NULL)
     ),
   # Show a plot of the generated distribution
   mainPanel(
+    tableOutput("table")
     #plotOutput("distPlot")
   )
 ))
